@@ -45,14 +45,18 @@ console.log(numArr.map((value, index) => value * 10));
 
 console.log(numArr.map(callbackfn));
 
+// filter why do twice?
+// numArr.filter(numArr.filter((ele) => ele % 2 == 0));
 numArr.filter((ele) => ele % 2 == 0);
 
 let students = andrew.students;
-
+// 串錯字 studnet 一係改返，一係後面跟返前面
+// console.log(students.filter((studnet) => students.name === "Andy"));
 console.log(students.filter((students) => students.name === "Andy"));
 
 console.log(students);
-
+// 串錯字 studnet 一係改返，一係後面跟返前面
+// let studentFound = students.filter((studnet) => students.name === "Dennis");
 let studentFound = students.filter((students) => students.name === "Dennis");
 
 console.log(studentFound);

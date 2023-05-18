@@ -5,10 +5,11 @@ function accumulator() {
     return sum;
   }
   return calculator;
-  return (num) => {
-    sum = sum + num;
-    return sum;
-  };
+  // this can remove outside the script
+  // return (num) => {
+  //     sum = sum + num
+  //     return sum
+  // }
 }
 
 const num = accumulator();
@@ -62,6 +63,11 @@ function extremeAccumulator() {
       sum += num;
       return acc;
     },
+    // 依到大階下面又細階
+    // Minus: (num) => {
+    //   sum -= num;
+    //   return acc;
+    // },
     minus: (num) => {
       sum -= num;
       return acc;
@@ -83,5 +89,6 @@ acc.add(233);
 console.log(acc.result());
 
 const extCal = extremeAccumulator();
-
+// minus冇add依個function see above extremeAccumulator function
+// console.log(extCal.add(333).minus.add(444).result());
 console.log(extCal.add(333).minus(444).result());
